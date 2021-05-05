@@ -203,6 +203,34 @@ aside{
     margin: 10px;
 }
 
+aside ul li:hover .submenu {
+    display: flex;
+}
+
+aside .submenu {
+    display: none;
+    position: relative;
+}
+  
+aside .submenu ul {
+    position: absolute;
+    top: 2px;
+    left: -2px;
+    display: flex;
+    flex-direction: column;
+  }
+
+aside .submenu ul li {
+    width: 100%;
+    padding: 0px 0px;
+    white-space: nowrap;
+    background: rgb(70, 70, 70);
+  }
+
+  aside .submenu ul li:hover {
+    background: rgba(0, 0, 0);
+  }
+
 .img_menu{
     display: none;
     width: 30px;
@@ -216,29 +244,29 @@ aside{
     background: rgba(0, 0, 0, 0.3);
 }
 
-.menu ul{
+aside .menu ul{
     margin: 0;
     list-style: none;
     padding: 0;
     display: flex;
 }
 
-.menu li{
+aside .menu li{
     border: 1px solid white;
     flex-grow: 1;
     text-align: center;
 }
 
-.menu li a{
+aside .menu li a{
     display: block;
     padding: 25px 20px;
     color: white;
     text-decoration: none;
 }
 
-.menu li:hover{
+aside .menu li:hover{
     cursor: pointer;
-    background: black;
+    background: rgba(0, 0, 0, 0.3);
 }
 
 
@@ -349,7 +377,7 @@ footer a:hover{
     #btn_menu:checked ~ .menu{
         margin: 0;
     }
-
+    
     main{
         margin: 0px;
         grid-area: main;
